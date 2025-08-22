@@ -74,7 +74,8 @@ TEMPLATES = [
 WSGI_APPLICATION = 'rcs_hackthon_django.wsgi.application'
 
 CORS_ALLOWED_ORIGINS = [
-    'https://webhook-ia-quote.onrender.com'
+    'https://webhook-ia-quote.onrender.com',
+    'http://127.0.0.1:5000',
 ]
 
 
