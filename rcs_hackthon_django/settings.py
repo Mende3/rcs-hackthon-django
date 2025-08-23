@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'app_req_logs',
     'rest_framework',
     'corsheaders',
+    'user_controller',
 ]
 
 MIDDLEWARE = [
@@ -55,6 +56,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'rcs_hackthon_django.urls'
+AUTH_USER_MODEL = 'user_controller.UsuariosDoSistema'
 
 TEMPLATES = [
     {

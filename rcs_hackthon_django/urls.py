@@ -17,8 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from app_req_logs.urls import urlpatterns as urlsemailquote
+from user_controller.urls import urlpatterns as urlsLlcusers
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('app_req_logs/', include(urlsemailquote)),
+    path('app_user_controller/', include(urlsLlcusers))
 ]
