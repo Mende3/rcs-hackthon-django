@@ -1,6 +1,7 @@
 from django.urls import path
-from .views import listAndCreateUser
+from .views import ListCreateNormalUser, ListCreateAdmin
 
 urlpatterns = [
-    path('list_and_create_users/', listAndCreateUser.as_view()),
+    path('list_and_create_normalusers/', ListCreateNormalUser.as_view()),
+    path('list_and_create_admins/', ListCreateAdmin.as_view()),
 ]

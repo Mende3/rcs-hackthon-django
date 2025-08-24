@@ -38,9 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app_req_logs',
+    'user_controller',
     'rest_framework',
     'corsheaders',
-    'user_controller',
+    'rolepermissions'
 ]
 
 MIDDLEWARE = [
@@ -57,6 +58,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'rcs_hackthon_django.urls'
 AUTH_USER_MODEL = 'user_controller.UsuariosDoSistema'
+ROLEPERMISSIONS_MODULE = 'user_controller.roles'
 
 TEMPLATES = [
     {
