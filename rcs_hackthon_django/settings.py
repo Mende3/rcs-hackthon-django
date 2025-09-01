@@ -25,9 +25,7 @@ SECRET_KEY = 'django-insecure-(359xywi4!p0-@yr@hwbf!2bzz8&5cy19c(i0(iz#_0yw!3^!p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    'rcs-hackthon-django.onrender.com'
-]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -91,9 +89,21 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',
     'https://webhook-ia-quote.onrender.com',
     'http://127.0.0.1:5000',
-    'https://rcs-hackthon-frontend.vercel.app/',
 ]
 
+CORS_ALLOW_HEADERS = [
+    "accept",
+    "accept-encoding",
+    "authorization",
+    "content-type",
+    "dnt",
+    "origin",
+    "user-agent",
+    "x-csrftoken",
+    "x-requested-with",
+]
+
+CORS_ALLOW_CREDENTIALS = True
 
 
 # Database
