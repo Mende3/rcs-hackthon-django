@@ -40,8 +40,8 @@ class PedidosDeCotacao (models.Model) :
     requisicao = models.TextField()
     resposta = models.TextField(blank=True, null=True)
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='pendente')
-    data = models.DateField(auto_now_add=True)
-    hora = models.TimeField(auto_now_add=True)
+    data = models.CharField(max_length=20)
+    hora = models.CharField(max_length=20)
     
     def save(self, *args, **kwargs):
         if not self.n_pedido:  # só atribui se ainda não tiver número

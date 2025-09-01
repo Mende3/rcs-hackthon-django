@@ -4,7 +4,7 @@ from .models import Emails, PedidosDeCotacao
 class PedidosDeCotacaoSerializer(serializers.ModelSerializer):
     class Meta:
         model = PedidosDeCotacao
-        fields = ['empresa', 'numero', 'requisicao', 'resposta', 'status']
+        fields = ['id', 'empresa', 'numero', 'requisicao', 'resposta', 'status', 'data', 'hora']
 
 class EmailsSerializer(serializers.ModelSerializer):
     pedidos = PedidosDeCotacaoSerializer(many=True)

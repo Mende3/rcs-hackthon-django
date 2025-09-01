@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'user_controller',
     'rest_framework',
     'corsheaders',
-    'rolepermissions'
+    'rest_framework_simplejwt',
 ]
 
 MIDDLEWARE = [
@@ -60,7 +60,15 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'rcs_hackthon_django.urls'
 AUTH_USER_MODEL = 'user_controller.UsuariosDoSistema'
-ROLEPERMISSIONS_MODULE = 'user_controller.roles'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ]
+}
 
 TEMPLATES = [
     {
@@ -80,8 +88,10 @@ TEMPLATES = [
 WSGI_APPLICATION = 'rcs_hackthon_django.wsgi.application'
 
 CORS_ALLOWED_ORIGINS = [
+    'http://localhost:5173',
     'https://webhook-ia-quote.onrender.com',
     'http://127.0.0.1:5000',
+    'https://rcs-hackthon-frontend.vercel.app/',
 ]
 
 
@@ -126,6 +136,9 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
+EMAIL_HOST_USER = "devsmalldev@gmail.com"        # substitui
+EMAIL_HOST_PASSWORD = "tuasenhaouappkey"
 
 
 # Static files (CSS, JavaScript, Images)
