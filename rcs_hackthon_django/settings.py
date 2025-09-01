@@ -91,6 +91,7 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',
     'https://webhook-ia-quote.onrender.com',
     'http://127.0.0.1:5000',
+    'https://rcs-hackthon-frontend.vercel.app',
 ]
 
 CORS_ALLOW_HEADERS = [
