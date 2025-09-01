@@ -4,4 +4,5 @@ markdown
 django-filter
 django-cors-headers
 django-role-permissions
+rest_framework_simplejwt
 gunicorn
