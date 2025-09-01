@@ -3,4 +3,4 @@ djangorestframework
 markdown
 django-filter
 django-cors-headers
-rolepermissions
+django-role-permissions
